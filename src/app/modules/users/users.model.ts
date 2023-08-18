@@ -25,10 +25,12 @@ export const userSchema = new Schema<IUser, Record<string, never>>(
     email: {
       type: String,
       required: true,
+      unique: true,
     },
     password: {
       type: String,
       required: true,
+      select: 0,
     },
     gender: {
       type: String,
