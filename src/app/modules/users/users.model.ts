@@ -50,6 +50,20 @@ export const userSchema = new Schema<IUser, Record<string, never>>(
   { timestamps: true, toJSON: { virtuals: true } },
 );
 
+// instance methods
+userSchema.methods.isUserExist = async function (
+  email: string,
+): Promise<Partial<IUser> | null> {
+  return await User.findOne({ email }, { email: 1, password: 1, role: 1 });
+};
+
+userSchema.methods.isPasswordMatch = async function (
+  givenPassword: string,
+  savedPassword: string,
+): Promise<boolean> {
+  return bcrypt.compare(givenPassword, savedPassword);
+};
+
 userSchema.pre('save', async function (next) {
   this.password = await bcrypt.hash(
     this.password,
