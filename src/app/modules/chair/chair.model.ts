@@ -1,6 +1,11 @@
 import { Schema, model } from 'mongoose';
 import { ChairModel, IChair } from './chair.interface';
-import { chairColor, chairMaterial, chairStyle } from './chair.constant';
+import {
+  chairColor,
+  chairMaterial,
+  chairStyle,
+  chairType,
+} from './chair.constant';
 
 const chairSchema = new Schema<IChair, Record<string, never>>({
   id: {
@@ -47,6 +52,10 @@ const chairSchema = new Schema<IChair, Record<string, never>>({
   description: {
     type: String,
     required: true,
+  },
+  type: {
+    type: String,
+    enum: chairType,
   },
 });
 

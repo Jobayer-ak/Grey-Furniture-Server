@@ -11,6 +11,7 @@ export type IChair = {
   soldOut: boolean;
   manufacturer: string;
   description: string;
+  type: 'Gaming' | 'Office';
 };
 
 export type ChairModel = Model<IChair, Record<string, unknown>>;
