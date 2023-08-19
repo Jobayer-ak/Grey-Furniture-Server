@@ -12,6 +12,7 @@ export type IChair = {
   manufacturer: string;
   description: string;
   type: 'Gaming' | 'Office';
+  images: string[];
 };
 
 export type ChairModel = Model<IChair, Record<string, unknown>>;
