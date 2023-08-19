@@ -1,9 +1,13 @@
 import { Schema, model } from 'mongoose';
-import { IUser, UserModel } from './users.interface';
+import { IUser, IUserMethods, UserModel } from './users.interface';
 import config from '../../../config';
 import bcrypt from 'bcrypt';
 
-export const userSchema = new Schema<IUser, Record<string, never>>(
+export const userSchema = new Schema<
+  IUser,
+  Record<string, never>,
+  IUserMethods
+>(
   {
     name: {
       type: {
@@ -61,7 +65,7 @@ userSchema.methods.isPasswordMatch = async function (
   givenPassword: string,
   savedPassword: string,
 ): Promise<boolean> {
-  return bcrypt.compare(givenPassword, savedPassword);
+  return await bcrypt.compare(givenPassword, savedPassword);
 };
 
 userSchema.pre('save', async function (next) {
