@@ -11,18 +11,15 @@ const chairSchema = new Schema<IChair, Record<string, never>>(
   {
     id: {
       type: String,
-      required: true,
       unique: true,
     },
     model: {
       type: String,
       required: true,
-      unique: true,
     },
     price: {
-      type: Number,
+      type: String,
       required: true,
-      unique: true,
     },
     material: {
       type: String,
@@ -40,10 +37,14 @@ const chairSchema = new Schema<IChair, Record<string, never>>(
     },
     inStock: {
       type: Boolean,
-      required: true,
+      default: true,
     },
     soldOut: {
       type: Boolean,
+      default: false,
+    },
+    quantity: {
+      type: Number,
       required: true,
     },
     manufacturer: {

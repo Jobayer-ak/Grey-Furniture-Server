@@ -8,11 +8,11 @@ import {
 
 const createChairZodSchema = z.object({
   body: z.object({
-    id: z.string({ required_error: 'Id is required!' }),
-    mdole: z.string({ required_error: 'Chair Model is required!' }),
-    price: z.number({ required_error: 'Price is required!' }),
-    inStock: z.boolean({ required_error: 'InStock is required!' }),
-    soldOut: z.boolean({ required_error: 'soldOut is required!' }),
+    id: z.string().optional(),
+    model: z.string({ required_error: 'Chair Model is required!' }),
+    price: z.string({ required_error: 'Price is required!' }),
+    inStock: z.boolean().optional(),
+    soldOut: z.boolean().optional(),
     manufacturer: z.string({ required_error: 'Manufacturer is required!' }),
     description: z.string({ required_error: 'Description is required!' }),
     material: z.enum([...chairMaterial] as [string, ...string[]], {

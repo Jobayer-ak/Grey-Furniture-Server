@@ -6,7 +6,7 @@ import createChairZodSchema from './chair.validation';
 const router = express.Router();
 
 router.post(
-  '/create-user',
+  '/create-chair',
   validateRequest(createChairZodSchema),
   ChairController.createChair,
 );

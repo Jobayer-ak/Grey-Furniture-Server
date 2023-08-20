@@ -17,15 +17,3 @@ const createUserZodSchema = z.object({
 });
 
 export default createUserZodSchema;
-
-/**
-name: UserName;
-  role: 'admin' | 'user';
-  email: string;
-  password: string;
-  gender: 'Male' | 'Female';
-  mobile: string;
-  address?: string;
-  profileImage?: string; 
-
-* */
