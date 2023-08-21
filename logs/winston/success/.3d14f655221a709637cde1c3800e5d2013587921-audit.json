@@ -49,6 +49,16 @@
             "date": 1692624920193,
             "name": "/home/jobayer/Projects/Personal Projects/Grey Furniture/Grey Furniture Server/logs/winston/success/ums-2023-21-08-19-succes.log",
             "hash": "77350971d232e69505abfc80572c429eafa61a03128e8928ff670b1f2c00a18e"
+        },
+        {
+            "date": 1692643182823,
+            "name": "/home/jobayer/Projects/Personal Projects/Grey Furniture/Grey Furniture Server/logs/winston/success/ums-2023-22-08-00-succes.log",
+            "hash": "725e6550fd47dd0cde5b9414043385fc7c66f8aadf891d7ddd186cce43b8326b"
+        },
+        {
+            "date": 1692644474366,
+            "name": "/home/jobayer/Projects/Personal Projects/Grey Furniture/Grey Furniture Server/logs/winston/success/ums-2023-22-08-01-succes.log",
+            "hash": "0c096ce915b1ac47c832243b359b9e3704e0c484bf5a9a57f8acf06de364c773"
         }
     ],
     "hashType": "sha256"

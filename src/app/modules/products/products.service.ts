@@ -31,7 +31,6 @@ const createChairService = async (
 
     // array
     const newChair = await Chair.create([chair], { session });
-    console.log('new chair: ', newChair);
 
     if (!newChair.length) {
       throw new ApiError(httpStatus.BAD_REQUEST, 'Failed to create chair!');
@@ -56,12 +55,10 @@ const createChairService = async (
     throw error;
   }
 
-  console.log('new Product data: ', productData);
-
   if (productData) {
-    productData = await Product.findOne({ id: productData.id }).populate(
-      'Chair',
-    );
+    productData = await Product.findOne({ id: productData.id }).populate({
+      path: 'chair',
+    });
   }
 
   return productData;
