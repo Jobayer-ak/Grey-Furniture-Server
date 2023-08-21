@@ -7,6 +7,10 @@ const productSchema = new Schema<IProduct, Record<string, never>>({
     required: true,
     unique: true,
   },
+  productName: {
+    type: String,
+    required: true,
+  },
   chair: {
     type: Schema.Types.ObjectId,
     ref: 'Chair',
