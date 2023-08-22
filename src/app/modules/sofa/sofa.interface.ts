@@ -1,11 +1,11 @@
 import { Model } from 'mongoose';
 
-export type ITable = {
+export type ISofa = {
   id?: string;
   model: string;
   price: string;
-  size: '48”W x 24”D x 30”H' | '60”W x 24”D x 30”H';
   color: string[];
+  size: 'Single Seater' | 'Double Seater' | 'Triple Seawter';
   inStock?: boolean;
   soldOut?: boolean;
   quantity: number;
@@ -15,4 +15,4 @@ export type ITable = {
   images: string[];
 };
 
-export type TableModel = Model<ITable, Record<string, unknown>>;
+export type TableModel = Model<ISofa, Record<string, unknown>>;

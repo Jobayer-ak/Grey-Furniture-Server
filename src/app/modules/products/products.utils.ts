@@ -62,7 +62,7 @@ export const findLastElevatingTableId = async (): Promise<
     .lean();
 
   return lastElevatingTable?.id
-    ? lastElevatingTable.id.substring(2)
+    ? lastElevatingTable.id.substring(3)
     : undefined;
 };
 
@@ -76,7 +76,7 @@ export const findLastNormalTableId = async (): Promise<string | undefined> => {
     })
     .lean();
 
-  return lastNormalTableId?.id ? lastNormalTableId.id.substring(2) : undefined;
+  return lastNormalTableId?.id ? lastNormalTableId.id.substring(3) : undefined;
 };
 
 export const generateElevatingTableId = async (): Promise<
@@ -91,7 +91,7 @@ export const generateElevatingTableId = async (): Promise<
   return incrementedId;
 };
 
-export const generateNormalTableId = async (): Promise<string> => {
+export const generateNormalTableId = async (): Promise<string | undefined> => {
   const currentId =
     (await findLastNormalTableId()) || (0).toString().padStart(6, '0');
 

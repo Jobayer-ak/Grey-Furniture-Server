@@ -21,6 +21,23 @@ const createChair = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const createTable = catchAsync(async (req: Request, res: Response) => {
+  const { table, ...giventProductData } = req.body;
+
+  const result = await ProductService.createTableService(
+    table,
+    giventProductData,
+  );
+
+  sendResponse<IProduct>(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'Table is created successfully!',
+    data: result,
+  });
+});
+
 export const ProductController = {
   createChair,
+  createTable,
 };
