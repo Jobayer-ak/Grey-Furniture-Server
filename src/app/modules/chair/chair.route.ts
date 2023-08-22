@@ -1,13 +1,12 @@
 import express from 'express';
 import { ChairController } from './chair.controller';
-import validateRequest from '../../middlewares/validateRequest';
-import createChairZodSchema from './chair.validation';
+// import validateRequest from '../../middlewares/validateRequest';
 
 const router = express.Router();
 
 router.post(
   '/create-chair',
-  validateRequest(createChairZodSchema),
+  // validateRequest(createChairZodSchema),
   ChairController.createChair,
 );
 

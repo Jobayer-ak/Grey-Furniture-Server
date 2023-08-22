@@ -12,7 +12,7 @@ const moduleRoutes = [
     route: AuthRoutes,
   },
   {
-    path: '/admin/collections',
+    path: '/collections',
     route: ProductRoutes,
   },
 ];

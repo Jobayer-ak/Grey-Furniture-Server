@@ -15,7 +15,7 @@ const productSchema = new Schema<IProduct, Record<string, never>>({
     type: Schema.Types.ObjectId,
     ref: 'Chair',
   },
-  desk: {
+  table: {
     type: Schema.Types.ObjectId,
     ref: 'Desk',
   },
