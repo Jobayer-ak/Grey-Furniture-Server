@@ -37,7 +37,24 @@ const createTable = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const createSofa = catchAsync(async (req: Request, res: Response) => {
+  const { sofa, ...giventProductData } = req.body;
+
+  const result = await ProductService.createSofaService(
+    sofa,
+    giventProductData,
+  );
+
+  sendResponse<IProduct>(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'Sofa is created successfully!',
+    data: result,
+  });
+});
+
 export const ProductController = {
   createChair,
   createTable,
+  createSofa,
 };

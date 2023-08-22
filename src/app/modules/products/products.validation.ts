@@ -6,6 +6,7 @@ import {
   chairType,
 } from '../chair/chair.constant';
 import { tableSize } from '../table/table.constants';
+import { sofaMaterial, sofaSize, sofaType } from '../sofa/sofa.constants';
 
 export const createChairZodSchema = z.object({
   body: z.object({
@@ -46,6 +47,30 @@ export const createTableZodSchema = z.object({
       description: z.string({ required_error: 'Description is required!' }),
       size: z.enum([...tableSize] as [string, ...string[]], {
         required_error: 'Table size is required!',
+      }),
+      images: z.array(z.string({ required_error: 'Images are required!' })),
+    }),
+  }),
+});
+
+export const createSofaZodSchema = z.object({
+  body: z.object({
+    sofa: z.object({
+      model: z.string({ required_error: 'Sofa Model is required!' }),
+      price: z.string({ required_error: 'Price is required!' }),
+      color: z.array(z.string({ required_error: 'Color is requried!' })),
+      material: z.enum([...sofaMaterial] as [string, ...string[]], {
+        required_error: 'Sofa Material is required!',
+      }),
+      inStock: z.boolean().optional(),
+      soldOut: z.boolean().optional(),
+      manufacturer: z.string({ required_error: 'Manufacturer is required!' }),
+      description: z.string({ required_error: 'Description is required!' }),
+      size: z.enum([...sofaSize] as [string, ...string[]], {
+        required_error: 'Sofa size is required!',
+      }),
+      type: z.enum([...sofaType] as [string, ...string[]], {
+        required_error: 'Sofa Type is required!',
       }),
       images: z.array(z.string({ required_error: 'Images are required!' })),
     }),

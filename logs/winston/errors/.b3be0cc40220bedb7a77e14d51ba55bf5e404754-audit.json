@@ -6,79 +6,9 @@
     "auditLog": "/home/jobayer/Projects/Personal Projects/Grey Furniture/Grey Furniture Server/logs/winston/errors/.b3be0cc40220bedb7a77e14d51ba55bf5e404754-audit.json",
     "files": [
         {
-            "date": 1692294505925,
-            "name": "/home/jobayer/Projects/Personal Projects/Grey Furniture/Grey Furniture Server/logs/winston/errors/ums-2023-17-08-23-error.log",
-            "hash": "ea9f1e7b3d6b49897706b37622d9e64acdfe7c9a588d9f9a88ff7200d66ed497"
-        },
-        {
-            "date": 1692369027520,
-            "name": "/home/jobayer/Projects/Personal Projects/Grey Furniture/Grey Furniture Server/logs/winston/errors/ums-2023-18-08-20-error.log",
-            "hash": "aeccab7300b01c0c25d74222d6c055115b378c2fa79cbfba3d7d6ba565a3d836"
-        },
-        {
-            "date": 1692456835771,
-            "name": "/home/jobayer/Projects/Personal Projects/Grey Furniture/Grey Furniture Server/logs/winston/errors/ums-2023-19-08-20-error.log",
-            "hash": "97b8fc3c47e2e1b9709e39d4156c4e084d42e7e732bd6cff0d3aaf415d7689a0"
-        },
-        {
-            "date": 1692457271787,
-            "name": "/home/jobayer/Projects/Personal Projects/Grey Furniture/Grey Furniture Server/logs/winston/errors/ums-2023-19-08-21-error.log",
-            "hash": "c1e3abb496fe3006f1509ff795579bf1f9fff8d0a4a5888ea7f86173b6f0eb19"
-        },
-        {
-            "date": 1692465390235,
-            "name": "/home/jobayer/Projects/Personal Projects/Grey Furniture/Grey Furniture Server/logs/winston/errors/ums-2023-19-08-23-error.log",
-            "hash": "80039f2b2a30098e61e9a8705a62f2e5e40e6ae433c0c7eb187274f56cb9eb45"
-        },
-        {
-            "date": 1692512115791,
-            "name": "/home/jobayer/Projects/Personal Projects/Grey Furniture/Grey Furniture Server/logs/winston/errors/ums-2023-20-08-12-error.log",
-            "hash": "97c86f26c7b796444f5336fbeb59f030df1164db8d7c465b3657dd053c771f09"
-        },
-        {
-            "date": 1692548699865,
-            "name": "/home/jobayer/Projects/Personal Projects/Grey Furniture/Grey Furniture Server/logs/winston/errors/ums-2023-20-08-22-error.log",
-            "hash": "81f6d281a3de5b750b8a722229eb5909f928c11eb2a4e4aa8bab75bdbbdcd2cc"
-        },
-        {
-            "date": 1692624920197,
-            "name": "/home/jobayer/Projects/Personal Projects/Grey Furniture/Grey Furniture Server/logs/winston/errors/ums-2023-21-08-19-error.log",
-            "hash": "c3c2e6be0d05c95fc16535c89d1e1f929dc48826e703d08d33c776fdd09a55ce"
-        },
-        {
-            "date": 1692643182828,
-            "name": "/home/jobayer/Projects/Personal Projects/Grey Furniture/Grey Furniture Server/logs/winston/errors/ums-2023-22-08-00-error.log",
-            "hash": "f9b892fa762db33677fb1fd3148b27ad06b751b7370a4432d84fd8c0015a41b7"
-        },
-        {
-            "date": 1692644483553,
-            "name": "/home/jobayer/Projects/Personal Projects/Grey Furniture/Grey Furniture Server/logs/winston/errors/ums-2023-22-08-01-error.log",
-            "hash": "ff1cd49297632e44d23edc2e7498dbfcb6093ce3ba714859dcb48b1c05a20ee2"
-        },
-        {
-            "date": 1692688037659,
-            "name": "/home/jobayer/Projects/Personal Projects/Grey Furniture/Grey Furniture Server/logs/winston/errors/ums-2023-22-08-13-error.log",
-            "hash": "bb72e676a036ed7be678b46479e98961ccaf63b915a49236fed74bda7067a1d3"
-        },
-        {
-            "date": 1692691202298,
-            "name": "/home/jobayer/Projects/Personal Projects/Grey Furniture/Grey Furniture Server/logs/winston/errors/ums-2023-22-08-14-error.log",
-            "hash": "fda60965c8e67b669f21b35678f0ed409c86ff79d18241e3b3d333d751e29f28"
-        },
-        {
-            "date": 1692704161387,
-            "name": "/home/jobayer/Projects/Personal Projects/Grey Furniture/Grey Furniture Server/logs/winston/errors/ums-2023-22-08-17-error.log",
-            "hash": "a287cb99ec48803e6f908348642cc9326e8f63542f9293089120dbde7650a279"
-        },
-        {
-            "date": 1692706404612,
-            "name": "/home/jobayer/Projects/Personal Projects/Grey Furniture/Grey Furniture Server/logs/winston/errors/ums-2023-22-08-18-error.log",
-            "hash": "161482019c9dbce3fe19f639bc0de7b56c7369694c1db06a849033e5e4e35914"
-        },
-        {
-            "date": 1692711124463,
-            "name": "/home/jobayer/Projects/Personal Projects/Grey Furniture/Grey Furniture Server/logs/winston/errors/ums-2023-22-08-19-error.log",
-            "hash": "c9c8a047b0d08165847bed21c63115f0d17a5a926cbf2c117d5e8784bdd7800d"
+            "date": 1692716474857,
+            "name": "/home/jobayer/Projects/Personal Projects/Grey Furniture/Grey Furniture Server/logs/winston/errors/ums-2023-22-08-21-error.log",
+            "hash": "1b45b3e49a87728079ede759e2f465c3a27916c7ec96bca45e7e7af1c5008eb1"
         }
     ],
     "hashType": "sha256"

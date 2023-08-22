@@ -5,14 +5,15 @@ export type ISofa = {
   model: string;
   price: string;
   color: string[];
-  size: 'Single Seater' | 'Double Seater' | 'Triple Seawter';
+  size: 'Single Seater' | 'Double Seater' | 'Tripple Seater';
+  material: 'PU Leather' | 'Soft Fabric ';
   inStock?: boolean;
   soldOut?: boolean;
   quantity: number;
   manufacturer: string;
   description: string;
-  type: 'Elevating' | 'Normal';
+  type: 'Normal' | 'Folding';
   images: string[];
 };
 
-export type TableModel = Model<ISofa, Record<string, unknown>>;
+export type SofaModel = Model<ISofa, Record<string, unknown>>;

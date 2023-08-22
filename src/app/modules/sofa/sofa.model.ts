@@ -1,8 +1,8 @@
 import { Schema, model } from 'mongoose';
-import { tableType } from './table.constants';
-import { ITable, TableModel } from './table.interface';
+import { sofaMaterial, sofaSize, sofaType } from './sofa.constants';
+import { ISofa, SofaModel } from './sofa.interface';
 
-const tableSchema = new Schema<ITable, Record<string, never>>(
+const sofaSchema = new Schema<ISofa, Record<string, never>>(
   {
     id: {
       type: String,
@@ -20,6 +20,14 @@ const tableSchema = new Schema<ITable, Record<string, never>>(
     color: {
       type: [String],
       required: true,
+    },
+    size: {
+      type: String,
+      enum: sofaSize,
+    },
+    material: {
+      type: String,
+      enum: sofaMaterial,
     },
 
     inStock: {
@@ -44,7 +52,7 @@ const tableSchema = new Schema<ITable, Record<string, never>>(
     },
     type: {
       type: String,
-      enum: tableType,
+      enum: sofaType,
     },
     images: {
       type: [String],
@@ -54,4 +62,4 @@ const tableSchema = new Schema<ITable, Record<string, never>>(
   { timestamps: true, toJSON: { virtuals: true } },
 );
 
-export const Table = model<ITable, TableModel>('Table', tableSchema);
+export const Sofa = model<ISofa, SofaModel>('Sofa', sofaSchema);

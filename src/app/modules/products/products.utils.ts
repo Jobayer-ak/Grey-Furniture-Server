@@ -100,3 +100,50 @@ export const generateNormalTableId = async (): Promise<string | undefined> => {
 
   return incrementedId;
 };
+
+// find last sofa id and generate sofa id
+
+export const findLastNormalSofaId = async (): Promise<string | undefined> => {
+  const lastNormalSofa = await Chair.findOne(
+    { type: 'Normal' },
+    { id: 1, _id: 0 },
+  )
+    .sort({
+      createdAt: -1,
+    })
+    .lean();
+
+  return lastNormalSofa?.id ? lastNormalSofa.id.substring(2) : undefined;
+};
+
+export const findLastFoldingSofaId = async (): Promise<string | undefined> => {
+  const lastFoldingSofa = await Chair.findOne(
+    { type: 'Folding' },
+    { id: 1, _id: 0 },
+  )
+    .sort({
+      createdAt: -1,
+    })
+    .lean();
+
+  return lastFoldingSofa?.id ? lastFoldingSofa.id.substring(2) : undefined;
+};
+export const generateNormalSofalId = async (): Promise<string> => {
+  const currentId =
+    (await findLastNormalSofaId()) || (0).toString().padStart(6, '0');
+
+  let incrementedId = (parseInt(currentId) + 1).toString().padStart(6, '0');
+  incrementedId = `N-${incrementedId}`;
+
+  return incrementedId;
+};
+
+export const generateFoldingSofaId = async (): Promise<string> => {
+  const currentId =
+    (await findLastFoldingSofaId()) || (0).toString().padStart(6, '0');
+
+  let incrementedId = (parseInt(currentId) + 1).toString().padStart(6, '0');
+  incrementedId = `F-${incrementedId}`;
+
+  return incrementedId;
+};

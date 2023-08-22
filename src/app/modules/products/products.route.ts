@@ -3,6 +3,7 @@ import validateRequest from '../../middlewares/validateRequest';
 import { ProductController } from './products.controller';
 import {
   createChairZodSchema,
+  createSofaZodSchema,
   createTableZodSchema,
 } from './products.validation';
 
@@ -18,6 +19,12 @@ router.post(
   '/create-product/table',
   validateRequest(createTableZodSchema),
   ProductController.createTable,
+);
+
+router.post(
+  '/create-product/sofa',
+  validateRequest(createSofaZodSchema),
+  ProductController.createSofa,
 );
 
 export const ProductRoutes = router;
