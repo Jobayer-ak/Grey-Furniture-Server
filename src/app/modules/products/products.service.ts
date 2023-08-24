@@ -18,11 +18,11 @@ import { Table } from '../table/table.model';
 import { Sofa } from '../sofa/sofa.model';
 import { ISofa } from '../sofa/sofa.interface';
 
-const createChairService = async (
-  chair: IChair,
-  product: IProduct,
-): Promise<IProduct | null> => {
+const createChairService = async (chair: IChair): Promise<IProduct | null> => {
   // set product name;
+
+  const product: IProduct = { id: undefined, productName: null };
+
   product.productName = 'Chair';
 
   // transaction
@@ -75,11 +75,11 @@ const createChairService = async (
   return productData;
 };
 
-const createTableService = async (
-  table: ITable,
-  product: IProduct,
-): Promise<IProduct | null> => {
+const createTableService = async (table: ITable): Promise<IProduct | null> => {
   // set product name;
+
+  const product: IProduct = { id: undefined, productName: null };
+
   product.productName = 'Table';
 
   // transaction
@@ -94,8 +94,8 @@ const createTableService = async (
         ? await generateElevatingTableId()
         : await generateNormalTableId();
 
+    product.id = productId?.toString();
     table.id = productId;
-    product.id = productId;
 
     // array
     const newTable = await Table.create([table], { session });
@@ -132,11 +132,11 @@ const createTableService = async (
   return productData;
 };
 
-const createSofaService = async (
-  sofa: ISofa,
-  product: IProduct,
-): Promise<IProduct | null> => {
+const createSofaService = async (sofa: ISofa): Promise<IProduct | null> => {
   // set product name;
+
+  const product: IProduct = { id: undefined, productName: null };
+
   product.productName = 'Sofa';
 
   // transaction

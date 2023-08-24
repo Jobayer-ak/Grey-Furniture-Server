@@ -16,7 +16,11 @@ const myFormat = printf(({ level, message, label, timestamp }) => {
 
 const logger = createLogger({
   level: 'info',
-  format: combine(label({ label: 'UMS!' }), timestamp(), myFormat),
+  format: combine(
+    label({ label: 'Grey Furniture000!' }),
+    timestamp(),
+    myFormat,
+  ),
   transports: [
     new transports.Console(),
 
@@ -26,7 +30,7 @@ const logger = createLogger({
         'logs',
         'winston',
         'success',
-        'ums-%DATE%-succes.log'
+        'ums-%DATE%-succes.log',
       ),
       datePattern: 'YYYY-DD-MM-HH',
       zippedArchive: true,
@@ -38,7 +42,11 @@ const logger = createLogger({
 
 const errorlogger = createLogger({
   level: 'error',
-  format: combine(label({ label: 'UMS!' }), timestamp(), myFormat),
+  format: combine(
+    label({ label: 'Grey Furniture000!' }),
+    timestamp(),
+    myFormat,
+  ),
   transports: [
     new transports.Console(),
     new DailyRotateFile({
@@ -47,7 +55,7 @@ const errorlogger = createLogger({
         'logs',
         'winston',
         'errors',
-        'ums-%DATE%-error.log'
+        'Grey-Furniture-%DATE%-error.log',
       ),
       datePattern: 'YYYY-DD-MM-HH',
       zippedArchive: true,

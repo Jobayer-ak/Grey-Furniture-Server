@@ -6,12 +6,9 @@ import httpStatus from 'http-status';
 import { ProductService } from './products.service';
 
 const createChair = catchAsync(async (req: Request, res: Response) => {
-  const { chair, ...givenProductData } = req.body;
+  const { chair } = req.body;
 
-  const result = await ProductService.createChairService(
-    chair,
-    givenProductData,
-  );
+  const result = await ProductService.createChairService(chair);
 
   sendResponse<IProduct>(res, {
     statusCode: httpStatus.OK,
@@ -22,12 +19,9 @@ const createChair = catchAsync(async (req: Request, res: Response) => {
 });
 
 const createTable = catchAsync(async (req: Request, res: Response) => {
-  const { table, ...giventProductData } = req.body;
+  const { table } = req.body;
 
-  const result = await ProductService.createTableService(
-    table,
-    giventProductData,
-  );
+  const result = await ProductService.createTableService(table);
 
   sendResponse<IProduct>(res, {
     statusCode: httpStatus.OK,
@@ -38,12 +32,9 @@ const createTable = catchAsync(async (req: Request, res: Response) => {
 });
 
 const createSofa = catchAsync(async (req: Request, res: Response) => {
-  const { sofa, ...giventProductData } = req.body;
+  const { sofa } = req.body;
 
-  const result = await ProductService.createSofaService(
-    sofa,
-    giventProductData,
-  );
+  const result = await ProductService.createSofaService(sofa);
 
   sendResponse<IProduct>(res, {
     statusCode: httpStatus.OK,

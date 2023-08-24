@@ -1,8 +1,8 @@
 import { Model, Types } from 'mongoose';
 
 export type IProduct = {
-  id: string;
-  productName: string;
+  id: string | undefined;
+  productName: string | null;
   chair?: Types.ObjectId;
   table?: Types.ObjectId;
   sofa?: Types.ObjectId;

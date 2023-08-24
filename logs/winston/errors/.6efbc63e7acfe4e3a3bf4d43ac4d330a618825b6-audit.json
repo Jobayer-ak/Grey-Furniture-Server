@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/home/jobayer/Projects/Personal Projects/Grey Furniture/Grey Furniture Server/logs/winston/errors/.6efbc63e7acfe4e3a3bf4d43ac4d330a618825b6-audit.json",
+    "files": [
+        {
+            "date": 1692889867350,
+            "name": "/home/jobayer/Projects/Personal Projects/Grey Furniture/Grey Furniture Server/logs/winston/errors/Grey-Furniture-2023-24-08-21-error.log",
+            "hash": "01ed6ad2e5aa963716d0720c932f904611a2fa909f7d4cf30de8de6bce2e636d"
+        }
+    ],
+    "hashType": "sha256"
+}
