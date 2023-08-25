@@ -4,10 +4,6 @@ import { ChairController } from './chair.controller';
 
 const router = express.Router();
 
-router.post(
-  '/create-chair',
-  // validateRequest(createChairZodSchema),
-  ChairController.createChair,
-);
+router.get('/', ChairController.getAllChair);
 
 export const ChairRoutes = router;

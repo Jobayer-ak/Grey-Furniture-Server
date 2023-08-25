@@ -17,3 +17,13 @@ export type IChair = {
 };
 
 export type ChairModel = Model<IChair, Record<string, unknown>>;
+
+export type IChairFilters = {
+  searchTerm?: string;
+  id?: string;
+  model?: string;
+  price?: string;
+  color?: string;
+  type?: string;
+  style?: string;
+};

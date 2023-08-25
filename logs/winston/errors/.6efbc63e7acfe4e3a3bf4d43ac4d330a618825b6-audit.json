@@ -6,9 +6,14 @@
     "auditLog": "/home/jobayer/Projects/Personal Projects/Grey Furniture/Grey Furniture Server/logs/winston/errors/.6efbc63e7acfe4e3a3bf4d43ac4d330a618825b6-audit.json",
     "files": [
         {
-            "date": 1692889867350,
-            "name": "/home/jobayer/Projects/Personal Projects/Grey Furniture/Grey Furniture Server/logs/winston/errors/Grey-Furniture-2023-24-08-21-error.log",
-            "hash": "01ed6ad2e5aa963716d0720c932f904611a2fa909f7d4cf30de8de6bce2e636d"
+            "date": 1692976160522,
+            "name": "/home/jobayer/Projects/Personal Projects/Grey Furniture/Grey Furniture Server/logs/winston/errors/Grey-Furniture-2023-25-08-21-error.log",
+            "hash": "cdfd5970a3b0a543144265495dd5ac0514d336915e82591ef67477a831dde3e1"
+        },
+        {
+            "date": 1692984038886,
+            "name": "/home/jobayer/Projects/Personal Projects/Grey Furniture/Grey Furniture Server/logs/winston/errors/Grey-Furniture-2023-25-08-23-error.log",
+            "hash": "9347c0b86526e1fe6b7c9d33c16408851886ccb6c31dfc5ed7124ff6f19c2556"
         }
     ],
     "hashType": "sha256"
