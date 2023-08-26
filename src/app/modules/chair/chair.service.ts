@@ -3,10 +3,10 @@ import { paginationHelpers } from '../../../helpers/paginationHelper';
 import { IGenericResponse } from '../../../interfaces/common';
 import { IPaginationOptions } from '../../../interfaces/pagination';
 import { chairSearchableFields } from './chair.constant';
-import { IChair, IChairFilters } from './chair.interface';
 import { Chair } from './chair.model';
 import ApiError from '../../../errors/ApiError';
 import httpStatus from 'http-status';
+import { IChair, IChairFilters } from './chair.interface';
 
 const getAllChairService = async (
   filters: IChairFilters,
