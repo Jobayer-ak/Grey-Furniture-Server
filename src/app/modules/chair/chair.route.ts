@@ -4,6 +4,7 @@ import { ChairController } from './chair.controller';
 
 const router = express.Router();
 
+router.get('/:id', ChairController.getSingleChair);
 router.get('/', ChairController.getAllChair);
 
 export const ChairRoutes = router;

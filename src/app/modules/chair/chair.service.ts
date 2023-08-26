@@ -59,6 +59,12 @@ const getAllChairService = async (
   };
 };
 
+const getSingleChairService = async (id: string): Promise<IChair | null> => {
+  const result = await Chair.findById(id);
+  return result;
+};
+
 export const ChairService = {
   getAllChairService,
+  getSingleChairService,
 };

@@ -25,6 +25,20 @@ const getAllChair = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const getSingleChair = catchAsync(async (req: Request, res: Response) => {
+  const { id } = req.params;
+
+  const result = await ChairService.getSingleChairService(id);
+
+  sendResponse<IChair>(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'Chari retrieved successfully !',
+    data: result,
+  });
+});
+
 export const ChairController = {
   getAllChair,
+  getSingleChair,
 };
