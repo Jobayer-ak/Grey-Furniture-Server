@@ -38,7 +38,22 @@ const getSingleChair = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const updateChair = catchAsync(async (req: Request, res: Response) => {
+  const { id } = req.params;
+  const updateData = req.body;
+
+  const result = await ChairService.updateChairService(id, updateData);
+
+  sendResponse<IChair>(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'Chair updated successfully !',
+    data: result,
+  });
+});
+
 export const ChairController = {
   getAllChair,
   getSingleChair,
+  updateChair,
 };

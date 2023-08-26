@@ -5,6 +5,8 @@ import { IPaginationOptions } from '../../../interfaces/pagination';
 import { chairSearchableFields } from './chair.constant';
 import { IChair, IChairFilters } from './chair.interface';
 import { Chair } from './chair.model';
+import ApiError from '../../../errors/ApiError';
+import httpStatus from 'http-status';
 
 const getAllChairService = async (
   filters: IChairFilters,
@@ -64,7 +66,22 @@ const getSingleChairService = async (id: string): Promise<IChair | null> => {
   return result;
 };
 
+const updateChairService = async (
+  id: string,
+  payload: Partial<IChair>,
+): Promise<IChair | null> => {
+  const isExist = await Chair.findOne({ id });
+
+  if (!isExist) {
+    throw new ApiError(httpStatus.BAD_REQUEST, 'Chair not found!');
+  }
+
+  const result = await Chair.findOneAndUpdate({ id }, payload, { new: true });
+  return result;
+};
+
 export const ChairService = {
   getAllChairService,
   getSingleChairService,
+  updateChairService,
 };
