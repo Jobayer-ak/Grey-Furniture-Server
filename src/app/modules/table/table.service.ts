@@ -3,7 +3,7 @@ import { IPaginationOptions } from '../../../interfaces/pagination';
 import { Table } from './table.model';
 import { paginationHelpers } from '../../../helpers/paginationHelper';
 import { tableSearchableFields } from './table.constants';
-import { ITableFilters } from './table.interface';
+import { ITable, ITableFilters } from './table.interface';
 
 const getAllTableService = async (
   filters: ITableFilters,
@@ -58,6 +58,12 @@ const getAllTableService = async (
   };
 };
 
+const getSingleTableService = async (id: string): Promise<ITable | null> => {
+  const result = await Table.findById(id);
+  return result;
+};
+
 export const TableService = {
   getAllTableService,
+  getSingleTableService,
 };

@@ -33,7 +33,7 @@ const getSingleChair = catchAsync(async (req: Request, res: Response) => {
   sendResponse<IChair>(res, {
     statusCode: httpStatus.OK,
     success: true,
-    message: 'Chari retrieved successfully !',
+    message: 'Chair retrieved successfully !',
     data: result,
   });
 });

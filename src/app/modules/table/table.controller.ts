@@ -27,6 +27,20 @@ const getAllTable = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const getSingleTable = catchAsync(async (req: Request, res: Response) => {
+  const { id } = req.params;
+
+  const result = await TableService.getSingleTableService(id);
+
+  sendResponse<ITable>(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'Table retrieved successfully !',
+    data: result,
+  });
+});
+
 export const TableController = {
   getAllTable,
+  getSingleTable,
 };
