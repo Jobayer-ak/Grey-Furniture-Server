@@ -3,6 +3,7 @@ import { UserRoutes } from '../modules/users/users.route';
 import { AuthRoutes } from '../modules/auth/auth.route';
 import { ProductRoutes } from '../modules/products/products.route';
 import { ChairRoutes } from '../modules/chair/chair.route';
+import { TableRoutes } from '../modules/table/table.route';
 
 const router = express.Router();
 
@@ -19,6 +20,10 @@ const moduleRoutes = [
   {
     path: '/collections/chairs',
     route: ChairRoutes,
+  },
+  {
+    path: '/collections/tables',
+    route: TableRoutes,
   },
 ];
 

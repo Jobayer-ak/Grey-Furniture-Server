@@ -16,3 +16,13 @@ export type ITable = {
 };
 
 export type TableModel = Model<ITable, Record<string, unknown>>;
+
+export type ITableFilters = {
+  searchTerm?: string;
+  id?: string;
+  model?: string;
+  price?: string;
+  color?: string;
+  type?: string;
+  manufacturer?: string;
+};
