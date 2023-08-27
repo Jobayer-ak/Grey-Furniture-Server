@@ -49,6 +49,11 @@
             "date": 1693118698587,
             "name": "/home/jobayer/Projects/Personal Projects/Grey Furniture/Grey Furniture Server/logs/winston/errors/Grey-Furniture-2023-27-08-12-error.log",
             "hash": "01da797abd925ed67761b427908545f3f5ae359f95eeb220ffe7bef863e4db1a"
+        },
+        {
+            "date": 1693119779987,
+            "name": "/home/jobayer/Projects/Personal Projects/Grey Furniture/Grey Furniture Server/logs/winston/errors/Grey-Furniture-2023-27-08-13-error.log",
+            "hash": "a86ca652a9af84a17bc12da72530e3a5879cc5b305940e295190ae762dd69a50"
         }
     ],
     "hashType": "sha256"

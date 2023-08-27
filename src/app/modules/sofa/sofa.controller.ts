@@ -27,6 +27,20 @@ const getAllSofa = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const getSingleSofa = catchAsync(async (req: Request, res: Response) => {
+  const { id } = req.params;
+
+  const result = await SofaService.getSingleSofaService(id);
+
+  sendResponse<ISofa>(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'Sofa retrieved successfully !',
+    data: result,
+  });
+});
+
 export const SofaController = {
   getAllSofa,
+  getSingleSofa,
 };

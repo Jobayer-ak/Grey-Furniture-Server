@@ -59,6 +59,12 @@ const getAllSofaService = async (
   };
 };
 
+const getSingleSofaService = async (id: string): Promise<ISofa | null> => {
+  const result = await Sofa.findById(id);
+  return result;
+};
+
 export const SofaService = {
   getAllSofaService,
+  getSingleSofaService,
 };
