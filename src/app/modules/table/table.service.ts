@@ -4,6 +4,8 @@ import { Table } from './table.model';
 import { paginationHelpers } from '../../../helpers/paginationHelper';
 import { tableSearchableFields } from './table.constants';
 import { ITable, ITableFilters } from './table.interface';
+import ApiError from '../../../errors/ApiError';
+import httpStatus from 'http-status';
 
 const getAllTableService = async (
   filters: ITableFilters,
@@ -63,7 +65,22 @@ const getSingleTableService = async (id: string): Promise<ITable | null> => {
   return result;
 };
 
+const updateTableService = async (
+  id: string,
+  payload: Partial<ITable>,
+): Promise<ITable | null> => {
+  const isExist = await Table.findOne({ id });
+
+  if (!isExist) {
+    throw new ApiError(httpStatus.BAD_REQUEST, 'Table not found!');
+  }
+
+  const result = await Table.findOneAndUpdate({ id }, payload, { new: true });
+  return result;
+};
+
 export const TableService = {
   getAllTableService,
   getSingleTableService,
+  updateTableService,
 };

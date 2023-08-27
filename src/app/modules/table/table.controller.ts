@@ -40,7 +40,22 @@ const getSingleTable = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const updateTable = catchAsync(async (req: Request, res: Response) => {
+  const { id } = req.params;
+  const updateData = req.body;
+
+  const result = await TableService.updateTableService(id, updateData);
+
+  sendResponse<ITable>(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'Table updated successfully !',
+    data: result,
+  });
+});
+
 export const TableController = {
   getAllTable,
   getSingleTable,
+  updateTable,
 };
