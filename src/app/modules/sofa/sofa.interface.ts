@@ -17,3 +17,13 @@ export type ISofa = {
 };
 
 export type SofaModel = Model<ISofa, Record<string, unknown>>;
+
+export type ISofaFilters = {
+  searchTerm?: string;
+  id?: string;
+  model?: string;
+  price?: string;
+  color?: string;
+  type?: string;
+  manufacturer?: string;
+};

@@ -44,6 +44,11 @@
             "date": 1693111469261,
             "name": "/home/jobayer/Projects/Personal Projects/Grey Furniture/Grey Furniture Server/logs/winston/success/ums-2023-27-08-10-succes.log",
             "hash": "3bec461b804249ece55f73cac549a84abf89b715cf348222fce8298143b46e11"
+        },
+        {
+            "date": 1693116061575,
+            "name": "/home/jobayer/Projects/Personal Projects/Grey Furniture/Grey Furniture Server/logs/winston/success/ums-2023-27-08-12-succes.log",
+            "hash": "1d236e7f9ab270ce63bbc5ccfe5c8d4f94aabd2d69b69eab65904bff870477e7"
         }
     ],
     "hashType": "sha256"

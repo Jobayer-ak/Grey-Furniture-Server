@@ -6,11 +6,12 @@ import { tableSearchableFields } from './table.constants';
 import { ITable, ITableFilters } from './table.interface';
 import ApiError from '../../../errors/ApiError';
 import httpStatus from 'http-status';
+import { IGenericResponse } from '../../../interfaces/common';
 
 const getAllTableService = async (
   filters: ITableFilters,
   paginationOptions: IPaginationOptions,
-) => {
+): Promise<IGenericResponse<ITable[]>> => {
   const { searchTerm, ...filtersData } = filters;
 
   const andConditions = [];
