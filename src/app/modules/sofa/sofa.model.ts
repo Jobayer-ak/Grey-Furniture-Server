@@ -1,5 +1,5 @@
 import { Schema, model } from 'mongoose';
-import { sofaMaterial, sofaSize, sofaType } from './sofa.constants';
+import { sofaMaterial, sofaType } from './sofa.constants';
 import { ISofa, SofaModel } from './sofa.interface';
 
 const sofaSchema = new Schema<ISofa, Record<string, never>>(
@@ -22,8 +22,21 @@ const sofaSchema = new Schema<ISofa, Record<string, never>>(
       required: true,
     },
     size: {
-      type: String,
-      enum: sofaSize,
+      required: true,
+      type: {
+        singleSeater: {
+          type: Number,
+          min: 0,
+        },
+        doubleSeater: {
+          type: Number,
+          min: 0,
+        },
+        trippleSeater: {
+          type: Number,
+          min: 0,
+        },
+      },
     },
     material: {
       type: String,

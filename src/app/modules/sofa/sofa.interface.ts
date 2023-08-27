@@ -1,12 +1,18 @@
 import { Model } from 'mongoose';
 
+type sofaSizes = {
+  singleSeater: number;
+  doubleSeater: number;
+  trippleSeater: number;
+};
+
 export type ISofa = {
   id?: string;
   model: string;
   price: string;
   color: string[];
-  size: 'Single Seater' | 'Double Seater' | 'Tripple Seater';
-  material: 'PU Leather' | 'Soft Fabric ';
+  size: sofaSizes;
+  material: 'PU Leather' | 'Soft Fabric';
   inStock?: boolean;
   soldOut?: boolean;
   quantity: number;

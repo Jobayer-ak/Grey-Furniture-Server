@@ -5,6 +5,8 @@ import { IPaginationOptions } from '../../../interfaces/pagination';
 import { sofaSearchableFields } from './sofa.constants';
 import { ISofa, ISofaFilters } from './sofa.interface';
 import { Sofa } from './sofa.model';
+import ApiError from '../../../errors/ApiError';
+import httpStatus from 'http-status';
 
 const getAllSofaService = async (
   filters: ISofaFilters,
@@ -64,7 +66,22 @@ const getSingleSofaService = async (id: string): Promise<ISofa | null> => {
   return result;
 };
 
+const updateSofaService = async (
+  id: string,
+  payload: Partial<ISofa>,
+): Promise<ISofa | null> => {
+  const isExist = await Sofa.findOne({ id });
+
+  if (!isExist) {
+    throw new ApiError(httpStatus.BAD_REQUEST, 'Sofa not found!');
+  }
+
+  const result = await Sofa.findOneAndUpdate({ id }, payload, { new: true });
+  return result;
+};
+
 export const SofaService = {
   getAllSofaService,
   getSingleSofaService,
+  updateSofaService,
 };

@@ -40,7 +40,22 @@ const getSingleSofa = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const updateSofa = catchAsync(async (req: Request, res: Response) => {
+  const { id } = req.params;
+  const updateData = req.body;
+
+  const result = await SofaService.updateSofaService(id, updateData);
+
+  sendResponse<ISofa>(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'Sofa updated successfully !',
+    data: result,
+  });
+});
+
 export const SofaController = {
   getAllSofa,
   getSingleSofa,
+  updateSofa,
 };
