@@ -1,5 +1,5 @@
 import { Schema, model } from 'mongoose';
-import { tableSize, tableType } from './table.constants';
+import { tableType } from './table.constants';
 import { ITable, TableModel } from './table.interface';
 
 const tableSchema = new Schema<ITable, Record<string, never>>(
@@ -17,8 +17,25 @@ const tableSchema = new Schema<ITable, Record<string, never>>(
       required: true,
     },
     size: {
-      type: String,
-      enum: tableSize,
+      required: true,
+      type: {
+        compact: {
+          type: Number,
+          min: 0,
+        },
+        standard: {
+          type: Number,
+          min: 0,
+        },
+        executive: {
+          type: Number,
+          min: 0,
+        },
+        extended: {
+          type: Number,
+          min: 0,
+        },
+      },
     },
     color: {
       type: [String],

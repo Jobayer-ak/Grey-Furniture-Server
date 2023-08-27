@@ -1,10 +1,17 @@
 import { Model } from 'mongoose';
 
+type ITableSize = {
+  compact: number;
+  standard: number;
+  executive: number;
+  extended: number;
+};
+
 export type ITable = {
   id?: string;
   model: string;
   price: string;
-  size: '48”W x 24”D x 30”H' | '60”W x 24”D x 30”H';
+  size: ITableSize;
   color: string[];
   inStock?: boolean;
   soldOut?: boolean;

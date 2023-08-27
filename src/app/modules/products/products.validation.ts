@@ -5,7 +5,6 @@ import {
   chairStyle,
   chairType,
 } from '../chair/chair.constant';
-import { tableSize } from '../table/table.constants';
 import { sofaMaterial, sofaType } from '../sofa/sofa.constants';
 
 export const createChairZodSchema = z.object({
@@ -45,8 +44,11 @@ export const createTableZodSchema = z.object({
       soldOut: z.boolean().optional(),
       manufacturer: z.string({ required_error: 'Manufacturer is required!' }),
       description: z.string({ required_error: 'Description is required!' }),
-      size: z.enum([...tableSize] as [string, ...string[]], {
-        required_error: 'Table size is required!',
+      size: z.object({
+        compact: z.number().optional(),
+        standard: z.number().optional(),
+        executive: z.number().optional(),
+        extended: z.number().optional(),
       }),
       images: z.array(z.string({ required_error: 'Images are required!' })),
     }),

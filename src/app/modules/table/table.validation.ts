@@ -1,7 +1,5 @@
 import { z } from 'zod';
 
-import { tableSize } from './table.constants';
-
 const updateTableZodSchema = z.object({
   body: z.object({
     model: z.string().optional(),
@@ -11,7 +9,14 @@ const updateTableZodSchema = z.object({
     quantity: z.number().optional(),
     manufacturer: z.string().optional(),
     description: z.string().optional(),
-    size: z.enum([...tableSize] as [string, ...string[]]).optional(),
+    size: z
+      .object({
+        compact: z.number().optional(),
+        standard: z.number().optional(),
+        executive: z.number().optional(),
+        extended: z.number().optional(),
+      })
+      .optional(),
     color: z.array(z.string()).optional(),
     images: z.array(z.string()).optional(),
   }),
